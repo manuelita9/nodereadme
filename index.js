@@ -25,3 +25,13 @@ function init() {
 
     })
 }
+function init() {
+    inquirer.prompt (questions)
+    .then (data=>{
+        console.log (data) 
+        var markdown=generateMarkdown(data)
+        console.log (markdown)
+        writeToFile('README2.md', markdown)
+  
+    })
+  }
